@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Szkoła Nauki Jazdy DRIFT Łódź – Prawo jazdy kat. A i B</title>
+  <title>Szkoła Nauki Jazdy DRIFT Łódź - Prawo jazdy kat. A i B</title>
   <meta name="description" content="Szkoła Nauki Jazdy DRIFT w Łodzi. Kurs prawa jazdy kat. A, B, C. Najlepsi instruktorzy, elastyczne terminy, wysoka zdawalność. Zapisz się dziś!">
   <meta name="keywords" content="szkoła nauki jazdy łódź, prawo jazdy łódź, kurs prawa jazdy, kat b łódź, drift szkoła jazdy, nauka jazdy łódź">
   <meta name="author" content="Szkoła Nauki Jazdy DRIFT Łódź">
-  <meta property="og:title" content="Szkoła Nauki Jazdy DRIFT – Łódź">
+  <meta property="og:title" content="Szkoła Nauki Jazdy DRIFT - Łódź">
   <meta property="og:description" content="Kurs prawa jazdy kat. A, B, C w Łodzi. Elastyczne terminy, doświadczeni instruktorzy, wysoka zdawalność egzaminów WORD.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,6 @@
 </head>
 <body>
 
-<!-- ===== PRELOADER ===== -->
 <div id="preloader">
   <div class="preloader-inner">
     <div class="wheel-spin">
@@ -38,7 +37,6 @@
   </div>
 </div>
 
-<!-- ===== NAVBAR ===== -->
 <header class="navbar" id="navbar">
   <div class="logo">
     <svg class="logo-icon" viewBox="0 0 36 28" fill="none">
@@ -83,12 +81,10 @@
   <a href="#contact" class="btn btn-primary" onclick="closeMobile()">Zapisz się</a>
 </nav>
 
-<!-- ===== HERO ===== -->
 <section id="hero" class="hero">
   <canvas id="roadCanvas"></canvas>
 
-  <!-- Animated road lines -->
-  <div class="road-bg" aria-hidden="true">
+    <div class="road-bg" aria-hidden="true">
     <div class="road-stripe s1"></div>
     <div class="road-stripe s2"></div>
     <div class="road-stripe s3"></div>
@@ -96,54 +92,36 @@
     <div class="road-stripe s5"></div>
   </div>
 
-  <!-- Animated car -->
-  <div class="hero-car" id="heroCar" aria-hidden="true">
+    <div class="hero-car" id="heroCar" aria-hidden="true">
     <svg viewBox="0 0 520 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- glow under car -->
-      <ellipse cx="260" cy="175" rx="220" ry="14" fill="rgba(255,95,0,0.15)" class="car-glow"/>
-      <!-- body -->
-      <path d="M60,140 L80,140 Q88,118 104,90 L185,55 Q228,38 288,38 L390,38 Q432,40 455,68 L470,95 L480,108 L480,140 Z" fill="#1a1a1a" stroke="#FF5F00" stroke-width="1.8"/>
-      <!-- windows -->
-      <path d="M182,60 L242,46 L336,46 L374,60 L346,100 L186,100 Z" fill="#0a1e2a" stroke="#FF8542" stroke-width="1.2" opacity="0.95"/>
-      <!-- window divider -->
-      <line x1="280" y1="46" x2="280" y2="100" stroke="#FF5F00" stroke-width="0.8" opacity="0.4"/>
-      <!-- body details / door crease -->
-      <path d="M90,140 L90,110 L186,100 L346,100 L440,108 L440,140" stroke="#FF5F00" stroke-width="0.8" fill="none" opacity="0.25"/>
-      <!-- front headlight -->
-      <path d="M455,70 L480,95 L480,118 L456,118 Z" fill="#FF8542" opacity="0.85"/>
-      <path d="M458,75 L476,98 L476,114 L460,114 Z" fill="white" opacity="0.35"/>
-      <!-- rear light -->
-      <rect x="55" y="110" width="22" height="16" rx="3" fill="#E63946" opacity="0.8"/>
-      <rect x="57" y="112" width="7" height="12" rx="1" fill="#ff6b6b" opacity="0.6"/>
-      <!-- exhaust -->
-      <rect x="60" y="138" width="14" height="5" rx="2" fill="#555"/>
-      <!-- rear spoiler hint -->
-      <path d="M72,138 L76,120 L125,114 L125,108 L76,114 Z" fill="#222" stroke="#FF5F00" stroke-width="0.8"/>
-      <!-- front bumper -->
-      <rect x="462" y="118" width="20" height="10" rx="3" fill="#FF5F00" opacity="0.7"/>
-      <!-- wheels -->
-      <circle cx="148" cy="140" r="36" fill="#0d0d0d" stroke="#FF5F00" stroke-width="2.5"/>
-      <circle cx="148" cy="140" r="24" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
-      <circle cx="148" cy="140" r="9" fill="#FF5F00"/>
-      <line x1="148" y1="116" x2="148" y2="164" stroke="#3a3a3a" stroke-width="2"/>
-      <line x1="124" y1="140" x2="172" y2="140" stroke="#3a3a3a" stroke-width="2"/>
-      <line x1="131" y1="123" x2="165" y2="157" stroke="#3a3a3a" stroke-width="1.5"/>
-      <line x1="165" y1="123" x2="131" y2="157" stroke="#3a3a3a" stroke-width="1.5"/>
-
-      <circle cx="408" cy="140" r="36" fill="#0d0d0d" stroke="#FF5F00" stroke-width="2.5"/>
-      <circle cx="408" cy="140" r="24" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
-      <circle cx="408" cy="140" r="9" fill="#FF5F00"/>
-      <line x1="408" y1="116" x2="408" y2="164" stroke="#3a3a3a" stroke-width="2"/>
-      <line x1="384" y1="140" x2="432" y2="140" stroke="#3a3a3a" stroke-width="2"/>
-      <line x1="391" y1="123" x2="425" y2="157" stroke="#3a3a3a" stroke-width="1.5"/>
-      <line x1="425" y1="123" x2="391" y2="157" stroke="#3a3a3a" stroke-width="1.5"/>
-      <!-- underbody glow line -->
-      <path d="M82,143 L476,143" stroke="#FF5F00" stroke-width="1" opacity="0.2"/>
+      <ellipse cx="260" cy="180" rx="205" ry="9" fill="rgba(255,95,0,0.12)" class="car-glow"/>
+      <path d="M60,142 L80,142 Q88,120 104,92 L185,57 Q228,40 288,40 L390,40 Q432,42 456,70 L471,97 L482,113 L482,142 Z" fill="#171717" stroke="#FF5F00" stroke-width="1.8"/>
+      <path d="M184,62 L244,48 L337,48 L375,62 L348,102 L186,102 Z" fill="#0a1e2a" stroke="#FF8542" stroke-width="1.2" opacity="0.9"/>
+      <line x1="281" y1="48" x2="281" y2="102" stroke="#FF5F00" stroke-width="0.8" opacity="0.35"/>
+      <path d="M88,142 L88,112 L186,102 L348,102 L442,110 L442,142" stroke="#FF5F00" stroke-width="0.8" fill="none" opacity="0.2"/>
+      <path d="M458,72 L482,98 L482,120 L459,120 Z" fill="#FF8542" opacity="0.9"/>
+      <path d="M461,78 L478,100 L478,116 L463,116 Z" fill="white" opacity="0.28"/>
+      <rect x="58" y="112" width="20" height="18" rx="3" fill="#aa1515" opacity="0.88"/>
+      <rect x="464" y="120" width="18" height="10" rx="2" fill="#FF5F00" opacity="0.65"/>
+      <path d="M84,147 L478,147" stroke="#FF5F00" stroke-width="0.8" opacity="0.14"/>
+      <circle cx="150" cy="142" r="36" fill="#0d0d0d" stroke="#FF5F00" stroke-width="2.5"/>
+      <circle cx="150" cy="142" r="24" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+      <circle cx="150" cy="142" r="9" fill="#FF5F00"/>
+      <line x1="150" y1="118" x2="150" y2="166" stroke="#3a3a3a" stroke-width="2"/>
+      <line x1="126" y1="142" x2="174" y2="142" stroke="#3a3a3a" stroke-width="2"/>
+      <line x1="133" y1="125" x2="167" y2="159" stroke="#3a3a3a" stroke-width="1.5"/>
+      <line x1="167" y1="125" x2="133" y2="159" stroke="#3a3a3a" stroke-width="1.5"/>
+      <circle cx="410" cy="142" r="36" fill="#0d0d0d" stroke="#FF5F00" stroke-width="2.5"/>
+      <circle cx="410" cy="142" r="24" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+      <circle cx="410" cy="142" r="9" fill="#FF5F00"/>
+      <line x1="410" y1="118" x2="410" y2="166" stroke="#3a3a3a" stroke-width="2"/>
+      <line x1="386" y1="142" x2="434" y2="142" stroke="#3a3a3a" stroke-width="2"/>
+      <line x1="393" y1="125" x2="427" y2="159" stroke="#3a3a3a" stroke-width="1.5"/>
+      <line x1="427" y1="125" x2="393" y2="159" stroke="#3a3a3a" stroke-width="1.5"/>
     </svg>
   </div>
 
-  <!-- Speed lines -->
-  <div class="speed-lines" aria-hidden="true">
+    <div class="speed-lines" aria-hidden="true">
     <div class="speed-line sl1"></div>
     <div class="speed-line sl2"></div>
     <div class="speed-line sl3"></div>
@@ -206,7 +184,6 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
 <section id="about" class="section about">
   <div class="container about-grid">
     <div class="about-text reveal">
@@ -245,7 +222,7 @@
           <span class="feat-icon">🎓</span>
           <div>
             <strong>Platforma e-learning</strong>
-            <span>Teoria online – ucz się kiedy chcesz</span>
+            <span>Teoria online - ucz się kiedy chcesz</span>
           </div>
         </div>
       </div>
@@ -273,14 +250,13 @@
         <div class="about-stat-card">
           <div class="asc-icon">🕐</div>
           <div class="asc-val">7 dni</div>
-          <div class="asc-label">w tygodniu · 07:00–22:00</div>
+          <div class="asc-label">w tygodniu · 07:00-22:00</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CATEGORIES ===== -->
 <section id="categories" class="section categories">
   <div class="container text-center">
     <span class="section-label reveal">Oferta</span>
@@ -307,7 +283,7 @@
         </svg>
       </div>
       <h3>Samochód osobowy</h3>
-      <p>Najbardziej popularna kategoria – prawo jazdy na samochody osobowe i dostawcze do 3,5 t. Teoria + 30h jazd.</p>
+      <p>Najbardziej popularna kategoria - prawo jazdy na samochody osobowe i dostawcze do 3,5 t. Teoria + 30h jazd.</p>
       <ul class="cat-features">
         <li>✓ 30 godzin jazd praktycznych</li>
         <li>✓ Platforma e-learning (teoria)</li>
@@ -315,7 +291,7 @@
         <li>✓ Materiały i testy online</li>
         <li>✓ Przygotowanie do egzaminu WORD</li>
       </ul>
-      <div class="cat-price">od <strong>2 100 zł</strong></div>
+      <div class="cat-price">od <strong>3 000 zł</strong></div>
       <a href="#pricing" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Wybierz kat. B</a>
     </article>
 
@@ -325,30 +301,27 @@
       <div class="cat-icon-wrap">
         <svg viewBox="0 0 64 44" fill="none" width="56">
           <ellipse cx="32" cy="34" rx="28" ry="8" fill="#111" stroke="#FF8542" stroke-width="1"/>
-          <!-- motorcycle body -->
           <path d="M14,32 Q20,20 32,18 Q44,16 50,28 L50,34 L14,34 Z" fill="#1e1e1e" stroke="#FF8542" stroke-width="1.5"/>
           <circle cx="14" cy="34" r="8" fill="#111" stroke="#FF8542" stroke-width="1.8"/>
           <circle cx="14" cy="34" r="3" fill="#FF8542"/>
           <circle cx="50" cy="34" r="8" fill="#111" stroke="#FF8542" stroke-width="1.8"/>
           <circle cx="50" cy="34" r="3" fill="#FF8542"/>
-          <!-- rider silhouette -->
           <path d="M30,18 Q28,10 34,8 Q40,6 40,14 L36,18 Z" fill="#333" stroke="#FF8542" stroke-width="1"/>
           <circle cx="34" cy="7" r="4" fill="#333" stroke="#FF8542" stroke-width="1"/>
-          <!-- handlebar -->
           <path d="M42,18 L50,14" stroke="#FF8542" stroke-width="1.5"/>
           <path d="M46,12 L52,12" stroke="#FF8542" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
       <h3>Motocykl</h3>
-      <p>Prawo jazdy na motocykle – od kat. A2 (do 35 kW) po pełne A bez ograniczeń. Nauka na nowoczesnych motocyklach.</p>
+      <p>Prawo jazdy na motocykle - od kat. A2 (do 35 kW) po pełne A bez ograniczeń. Nauka na nowoczesnych motocyklach.</p>
       <ul class="cat-features">
-        <li>✓ A1 / A2 / A – pełen zakres</li>
+        <li>✓ A1 / A2 / A - pełen zakres</li>
         <li>✓ 20 godzin jazd praktycznych</li>
         <li>✓ Plac manewrowy DRIFT</li>
         <li>✓ Teoria online + testy</li>
         <li>✓ Kask i rękawice w cenie kursu</li>
       </ul>
-      <div class="cat-price">od <strong>1 800 zł</strong></div>
+      <div class="cat-price">od <strong>3 000 zł</strong></div>
       <a href="#pricing" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Wybierz kat. A</a>
     </article>
 
@@ -356,16 +329,13 @@
       <div class="cat-letter" style="color:#aaa">C</div>
       <div class="cat-icon-wrap">
         <svg viewBox="0 0 80 44" fill="none" width="72">
-          <!-- truck body -->
           <rect x="4" y="18" width="72" height="22" rx="3" fill="#1e1e1e" stroke="#aaa" stroke-width="1.5"/>
           <rect x="50" y="8" width="26" height="16" rx="3" fill="#1e1e1e" stroke="#aaa" stroke-width="1.5"/>
           <rect x="52" y="10" width="10" height="10" rx="1" fill="#0a2030" stroke="#ccc" stroke-width="0.8"/>
           <rect x="63" y="10" width="10" height="10" rx="1" fill="#0a2030" stroke="#ccc" stroke-width="0.8"/>
-          <!-- cargo box -->
           <rect x="4" y="10" width="44" height="30" rx="2" fill="#161616" stroke="#888" stroke-width="1.2"/>
           <line x1="4" y1="20" x2="48" y2="20" stroke="#888" stroke-width="0.8" opacity="0.4"/>
           <line x1="26" y1="10" x2="26" y2="40" stroke="#888" stroke-width="0.8" opacity="0.4"/>
-          <!-- wheels -->
           <circle cx="18" cy="40" r="6" fill="#111" stroke="#aaa" stroke-width="1.5"/>
           <circle cx="18" cy="40" r="2" fill="#aaa"/>
           <circle cx="56" cy="40" r="6" fill="#111" stroke="#aaa" stroke-width="1.5"/>
@@ -376,7 +346,7 @@
         </svg>
       </div>
       <h3>Ciężarówka / ciągnik</h3>
-      <p>Kategoria C i C+E – prawo jazdy na pojazdy ciężarowe powyżej 3,5 t i zestawy ciągnik–naczepa. Idealna dla zawodowców.</p>
+      <p>Kategoria C i C+E - prawo jazdy na pojazdy ciężarowe powyżej 3,5 t i zestawy ciągnik-naczepa. Idealna dla zawodowców.</p>
       <ul class="cat-features">
         <li>✓ Kat. C i C+E (ciągnik z naczepą)</li>
         <li>✓ Moduł kwalifikacji wstępnej</li>
@@ -391,23 +361,21 @@
   </div>
 </section>
 
-<!-- ===== PRICING ===== -->
 <section id="pricing" class="section pricing">
   <div class="container text-center">
     <span class="section-label reveal">Cennik</span>
     <h2 class="section-title reveal">Przejrzyste <span>ceny</span></h2>
-    <p class="section-sub reveal">Bez ukrytych kosztów. Wszystko wliczone – materiały, platforma, egzamin wewnętrzny.</p>
+    <p class="section-sub reveal">Bez ukrytych kosztów. Wszystko wliczone - materiały, platforma, egzamin wewnętrzny.</p>
   </div>
 
   <div class="pricing-grid">
 
-    <!-- BASIC -->
-    <div class="pricing-card reveal">
+        <div class="pricing-card reveal">
       <div class="pricing-header">
         <div class="pkg-badge">Kat. B</div>
         <div class="pkg-name">PODSTAWOWY</div>
         <div class="pkg-sub">Dla każdego startującego</div>
-        <div class="pkg-price"><span class="price-val">2 100</span><span class="price-cur">zł</span></div>
+        <div class="pkg-price"><span class="price-val">3 000</span><span class="price-cur">zł</span></div>
         <div class="price-note">30 godz. jazd · teoria online</div>
       </div>
       <ul class="pkg-features">
@@ -417,21 +385,20 @@
         <li><span class="chk">✓</span> Podręcznik i materiały PDF</li>
         <li><span class="chk">✓</span> Egzamin wewnętrzny DRIFT</li>
         <li><span class="chk">✓</span> Pomoc w zapisie do WORD</li>
-        <li><span class="dim">–</span> Symulator jazdy</li>
-        <li><span class="dim">–</span> Jazdy nocne (2h)</li>
-        <li><span class="dim">–</span> Kurs pierwszej pomocy</li>
+        <li><span class="dim">-</span> Symulator jazdy</li>
+        <li><span class="dim">-</span> Jazdy nocne (2h)</li>
+        <li><span class="dim">-</span> Kurs pierwszej pomocy</li>
       </ul>
       <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center">Wybierz Podstawowy</a>
     </div>
 
-    <!-- COMFORT -->
-    <div class="pricing-card pricing-featured reveal reveal-delay-1">
+        <div class="pricing-card pricing-featured reveal reveal-delay-1">
       <div class="popular-badge">POLECANY</div>
       <div class="pricing-header">
         <div class="pkg-badge">Kat. B</div>
         <div class="pkg-name">KOMFORT</div>
         <div class="pkg-sub">Najpopularniejszy wybór</div>
-        <div class="pkg-price"><span class="price-val">2 499</span><span class="price-cur">zł</span></div>
+        <div class="pkg-price"><span class="price-val">3 500</span><span class="price-cur">zł</span></div>
         <div class="price-note">30 godz. jazd · pełen pakiet</div>
       </div>
       <ul class="pkg-features">
@@ -443,18 +410,17 @@
         <li><span class="chk">✓</span> Pomoc w zapisie do WORD</li>
         <li><span class="chk">✓</span> 2h na symulatorze jazdy</li>
         <li><span class="chk">✓</span> 2h jazd nocnych</li>
-        <li><span class="dim">–</span> Kurs pierwszej pomocy</li>
+        <li><span class="dim">-</span> Kurs pierwszej pomocy</li>
       </ul>
       <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Wybierz Komfort</a>
     </div>
 
-    <!-- PREMIUM -->
-    <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-card reveal reveal-delay-2">
       <div class="pricing-header">
         <div class="pkg-badge">Kat. B</div>
         <div class="pkg-name">PREMIUM</div>
-        <div class="pkg-sub">Wszystko w cenie – zero stresu</div>
-        <div class="pkg-price"><span class="price-val">2 899</span><span class="price-cur">zł</span></div>
+        <div class="pkg-sub">Wszystko w cenie - zero stresu</div>
+        <div class="pkg-price"><span class="price-val">4 200</span><span class="price-cur">zł</span></div>
         <div class="price-note">30+ godz. jazd · all inclusive</div>
       </div>
       <ul class="pkg-features">
@@ -473,8 +439,7 @@
 
   </div>
 
-  <!-- Add-ons -->
-  <div class="addons-wrap reveal">
+    <div class="addons-wrap reveal">
     <h3 class="addons-title">Dodatkowe godziny jazd i opcje</h3>
     <div class="addons-grid">
       <div class="addon-item">
@@ -483,7 +448,7 @@
       </div>
       <div class="addon-item">
         <span class="addon-name">Kurs kategorii A / A2</span>
-        <span class="addon-price">od 1 800 zł</span>
+        <span class="addon-price">od 3 000 zł</span>
       </div>
       <div class="addon-item">
         <span class="addon-name">Kurs kategorii C</span>
@@ -510,12 +475,11 @@
   </div>
 </section>
 
-<!-- ===== SCHEDULE ===== -->
 <section id="schedule" class="section schedule">
   <div class="container text-center">
     <span class="section-label reveal">Nabory 2026</span>
     <h2 class="section-title reveal">Dostępne <span>terminy</span></h2>
-    <p class="section-sub reveal">Nowe grupy startują co 2–3 tygodnie. Zajęcia w dni powszednie i weekendy – dopasuj do siebie.</p>
+    <p class="section-sub reveal">Nowe grupy startują co 2-3 tygodnie. Zajęcia w dni powszednie i weekendy - dopasuj do siebie.</p>
   </div>
 
   <div class="schedule-grid">
@@ -526,12 +490,12 @@
       <div class="schedule-event hot">
         <div class="event-date"><span class="day">7</span><span class="mon">kwi</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — wieczorowa</div>
+          <div class="event-name">Nowa grupa kat. B - wieczorowa</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Komfort</span>
             <span class="tag tag-slots">🔥 3 miejsca</span>
           </div>
-          <div class="event-time">⏰ Wt / Czw · 18:00–20:00</div>
+          <div class="event-time">⏰ Wt / Czw · 18:00-20:00</div>
         </div>
         <a href="#contact" class="btn btn-primary btn-sm">Zapisz</a>
       </div>
@@ -539,12 +503,12 @@
       <div class="schedule-event">
         <div class="event-date"><span class="day">14</span><span class="mon">kwi</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — weekendowa</div>
+          <div class="event-name">Nowa grupa kat. B - weekendowa</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Podstawowy</span>
             <span class="tag tag-slots">6 miejsc</span>
           </div>
-          <div class="event-time">⏰ Sob / Ndz · 09:00–13:00</div>
+          <div class="event-time">⏰ Sob / Ndz · 09:00-13:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -557,7 +521,7 @@
             <span class="tag tag-pkg">Kat. A · Pełny</span>
             <span class="tag tag-slots">5 miejsc</span>
           </div>
-          <div class="event-time">⏰ Pon / Śr · 17:00–19:00</div>
+          <div class="event-time">⏰ Pon / Śr · 17:00-19:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -569,12 +533,12 @@
       <div class="schedule-event">
         <div class="event-date"><span class="day">5</span><span class="mon">maj</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — poranna</div>
+          <div class="event-name">Nowa grupa kat. B - poranna</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Premium</span>
             <span class="tag tag-slots">8 miejsc</span>
           </div>
-          <div class="event-time">⏰ Pon / Śr / Pt · 08:00–10:00</div>
+          <div class="event-time">⏰ Pon / Śr / Pt · 08:00-10:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -587,7 +551,7 @@
             <span class="tag tag-pkg">Kat. C</span>
             <span class="tag tag-slots">4 miejsca</span>
           </div>
-          <div class="event-time">⏰ Wt / Czw / Sob · 07:00–09:00</div>
+          <div class="event-time">⏰ Wt / Czw / Sob · 07:00-09:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -595,12 +559,12 @@
       <div class="schedule-event">
         <div class="event-date"><span class="day">19</span><span class="mon">maj</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — weekendowa</div>
+          <div class="event-name">Nowa grupa kat. B - weekendowa</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Komfort</span>
             <span class="tag tag-slots">7 miejsc</span>
           </div>
-          <div class="event-time">⏰ Sob / Ndz · 10:00–14:00</div>
+          <div class="event-time">⏰ Sob / Ndz · 10:00-14:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -612,12 +576,12 @@
       <div class="schedule-event">
         <div class="event-date"><span class="day">2</span><span class="mon">cze</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — wieczorowa</div>
+          <div class="event-name">Nowa grupa kat. B - wieczorowa</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Podstawowy</span>
             <span class="tag tag-slots">8 miejsc</span>
           </div>
-          <div class="event-time">⏰ Wt / Czw · 19:00–21:00</div>
+          <div class="event-time">⏰ Wt / Czw · 19:00-21:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -630,7 +594,7 @@
             <span class="tag tag-pkg">Kat. A · Pełny</span>
             <span class="tag tag-slots">6 miejsc</span>
           </div>
-          <div class="event-time">⏰ Pon / Śr · 16:00–18:00</div>
+          <div class="event-time">⏰ Pon / Śr · 16:00-18:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -638,12 +602,12 @@
       <div class="schedule-event">
         <div class="event-date"><span class="day">23</span><span class="mon">cze</span></div>
         <div class="event-info">
-          <div class="event-name">Nowa grupa kat. B — Premium</div>
+          <div class="event-name">Nowa grupa kat. B - Premium</div>
           <div class="event-details">
             <span class="tag tag-pkg">Kat. B · Premium</span>
             <span class="tag tag-slots">5 miejsc</span>
           </div>
-          <div class="event-time">⏰ Pon / Śr / Pt · 17:00–19:00</div>
+          <div class="event-time">⏰ Pon / Śr / Pt · 17:00-19:00</div>
         </div>
         <a href="#contact" class="btn btn-outline btn-sm">Zapisz</a>
       </div>
@@ -653,16 +617,15 @@
 
   <div class="schedule-note reveal">
     <svg viewBox="0 0 20 20" fill="#FF5F00" width="20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 12H9v-4h2v4zm0-6H9V6h2v2z"/></svg>
-    Nie widzisz odpowiedniego terminu? Skontaktuj się z nami – tworzymy grupy indywidualne i kursy przyspieszone dostosowane do Twojego kalendarza.
+    Nie widzisz odpowiedniego terminu? Skontaktuj się z nami - tworzymy grupy indywidualne i kursy przyspieszone dostosowane do Twojego kalendarza.
   </div>
 </section>
 
-<!-- ===== INSTRUCTORS ===== -->
 <section id="instructors" class="section instructors">
   <div class="container text-center">
     <span class="section-label reveal">Kadra</span>
     <h2 class="section-title reveal">Nasi <span>instruktorzy</span></h2>
-    <p class="section-sub reveal">Każdy z nich posiada uprawnienia SEK i wieloletnie doświadczenie – w ich rękach jesteś bezpieczny.</p>
+    <p class="section-sub reveal">Każdy z nich posiada uprawnienia SEK i wieloletnie doświadczenie - w ich rękach jesteś bezpieczny.</p>
   </div>
 
   <div class="instructors-grid">
@@ -677,7 +640,7 @@
       <div class="instructor-body">
         <h3>Kamil Kowalski</h3>
         <div class="instructor-title">Założyciel · Instruktor kat. A, B, C</div>
-        <p>Instruktor z 14-letnim stażem, założyciel DRIFT. Przeprowadził ponad 800 kursantów przez egzamin w WORD. Specjalista od trudnych przypadków – szczególnie poleca się osobom, które miały już obawy przed jazdą.</p>
+        <p>Instruktor z 14-letnim stażem, założyciel DRIFT. Przeprowadził ponad 800 kursantów przez egzamin w WORD. Specjalista od trudnych przypadków - szczególnie poleca się osobom, które miały już obawy przed jazdą.</p>
         <div class="instructor-stats">
           <div><strong>14</strong><small>lat stażu</small></div>
           <div><strong>800+</strong><small>kursantów</small></div>
@@ -734,7 +697,7 @@
       <div class="instructor-body">
         <h3>Anna Nowak</h3>
         <div class="instructor-title">Instruktorka kat. B · Specjalistka od podstaw</div>
-        <p>Jedna z niewielu instruktorek w regionie. Specjalizuje się w pracy z osobami bardzo stremowanymi i z lękiem przed jazdą. Cierpliwa i empatyczna – jej kursanci bardzo szybko nabierają pewności siebie.</p>
+        <p>Jedna z niewielu instruktorek w regionie. Specjalizuje się w pracy z osobami bardzo stremowanymi i z lękiem przed jazdą. Cierpliwa i empatyczna - jej kursanci bardzo szybko nabierają pewności siebie.</p>
         <div class="instructor-stats">
           <div><strong>6</strong><small>lat stażu</small></div>
           <div><strong>350+</strong><small>kursantów</small></div>
@@ -746,7 +709,6 @@
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
 <section id="testimonials" class="section testimonials">
   <div class="container text-center">
     <span class="section-label reveal">Opinie</span>
@@ -758,7 +720,7 @@
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"Zdałam egzamin za pierwszym razem! Kamil to świetny instruktor – spokojny, dokładny, zawsze tłumaczył co i dlaczego. Cały kurs był zorganizowany idealnie. Polecam DRIFT każdemu, kto podchodzi do nauki jazdy poważnie."</blockquote>
+        <blockquote>"Zdałam egzamin za pierwszym razem! Kamil to świetny instruktor - spokojny, dokładny, zawsze tłumaczył co i dlaczego. Cały kurs był zorganizowany idealnie. Polecam DRIFT każdemu, kto podchodzi do nauki jazdy poważnie."</blockquote>
         <div class="author">
           <div class="author-avatar">MK</div>
           <div>
@@ -770,7 +732,7 @@
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"Miałem poważny stres przed nauką jazdy – byłem u trzech instruktorów i nigdzie nie czułem się dobrze. Anna z DRIFT totalnie odmieniła moje podejście. Po 5 godzinach już jeździłem spokojnie. Egzamin zdałem za pierwszym razem. DZIĘKUJĘ!"</blockquote>
+        <blockquote>"Miałem poważny stres przed nauką jazdy - byłem u trzech instruktorów i nigdzie nie czułem się dobrze. Anna z DRIFT totalnie odmieniła moje podejście. Po 5 godzinach już jeździłem spokojnie. Egzamin zdałem za pierwszym razem. DZIĘKUJĘ!"</blockquote>
         <div class="author">
           <div class="author-avatar">TR</div>
           <div>
@@ -782,7 +744,7 @@
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"Brałem kurs motocyklowy – Patryk to absolutny mistrz w tłumaczeniu manewrów na placu. Czułem się bezpiecznie przez cały kurs. Zdałem egzamin A2 za pierwszym razem i już jeżdżę na własnym motocyklu. Super szkoła!"</blockquote>
+        <blockquote>"Brałem kurs motocyklowy - Patryk to absolutny mistrz w tłumaczeniu manewrów na placu. Czułem się bezpiecznie przez cały kurs. Zdałem egzamin A2 za pierwszym razem i już jeżdżę na własnym motocyklu. Super szkoła!"</blockquote>
         <div class="author">
           <div class="author-avatar">JP</div>
           <div>
@@ -794,7 +756,7 @@
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"Platforma e-learning jest świetna – uczyłem się teorii z telefonu w autobusie i zdałem test teoretyczny za pierwszym razem. Kurs był dobrze zorganizowany, a sam instruktor Kamil – bardzo profesjonalny. Polecam wszystkim!"</blockquote>
+        <blockquote>"Platforma e-learning jest świetna - uczyłem się teorii z telefonu w autobusie i zdałem test teoretyczny za pierwszym razem. Kurs był dobrze zorganizowany, a sam instruktor Kamil - bardzo profesjonalny. Polecam wszystkim!"</blockquote>
         <div class="author">
           <div class="author-avatar">AG</div>
           <div>
@@ -832,24 +794,23 @@
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
 <section id="faq" class="section faq">
   <div class="container">
     <div class="text-center reveal">
       <span class="section-label">FAQ</span>
       <h2 class="section-title">Masz pytania?</h2>
-      <p class="section-sub" style="max-width:500px;margin:0 auto 48px">Zebraliśmy najczęstsze pytania naszych kursantów. Jeśli nie znajdziesz odpowiedzi – napisz do nas!</p>
+      <p class="section-sub" style="max-width:500px;margin:0 auto 48px">Zebraliśmy najczęstsze pytania naszych kursantów. Jeśli nie znajdziesz odpowiedzi - napisz do nas!</p>
     </div>
 
     <div class="faq-list">
 
       <div class="faq-item reveal">
         <button class="faq-question" aria-expanded="false">
-          Od czego zacząć – jak zapisać się na kurs?
+          Od czego zacząć - jak zapisać się na kurs?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Wystarczy wypełnić formularz kontaktowy na tej stronie lub zadzwonić/napisać do nas. Nasz konsultant odezwie się w ciągu godziny (w godzinach pracy), dobierze odpowiedni pakiet i termin oraz wytłumaczy kolejne kroki. Po opłaceniu kursu – zapraszamy na pierwsze zajęcia!</p>
+          <p>Wystarczy wypełnić formularz kontaktowy na tej stronie lub zadzwonić/napisać do nas. Nasz konsultant odezwie się w ciągu godziny (w godzinach pracy), dobierze odpowiedni pakiet i termin oraz wytłumaczy kolejne kroki. Po opłaceniu kursu - zapraszamy na pierwsze zajęcia!</p>
         </div>
       </div>
 
@@ -859,7 +820,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Do zapisu potrzebujesz: dowodu osobistego (lub innego dokumentu tożsamości), orzeczenia lekarskiego o braku przeciwwskazań zdrowotnych do kierowania (profil kandydata na kierowcę można wyrobić przez stronę gov.pl lub osobiście w Urzędzie Miasta). Pomożemy Ci przez cały proces – krok po kroku.</p>
+          <p>Do zapisu potrzebujesz: dowodu osobistego (lub innego dokumentu tożsamości), orzeczenia lekarskiego o braku przeciwwskazań zdrowotnych do kierowania (profil kandydata na kierowcę można wyrobić przez stronę gov.pl lub osobiście w Urzędzie Miasta). Pomożemy Ci przez cały proces - krok po kroku.</p>
         </div>
       </div>
 
@@ -869,7 +830,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Minimalny czas trwania kursu wynika z przepisów: 30 godzin jazd praktycznych + wymagana ilość teorii. Przy zajęciach 2–3x w tygodniu możesz być gotowy do egzaminu w WORD już po 6–8 tygodniach. Oferujemy też kursy przyspieszone – skontaktuj się z nami w tej sprawie.</p>
+          <p>Minimalny czas trwania kursu wynika z przepisów: 30 godzin jazd praktycznych + wymagana ilość teorii. Przy zajęciach 2-3x w tygodniu możesz być gotowy do egzaminu w WORD już po 6-8 tygodniach. Oferujemy też kursy przyspieszone - skontaktuj się z nami w tej sprawie.</p>
         </div>
       </div>
 
@@ -879,7 +840,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Oczywiście! Vouchery to jeden z naszych bestsellerów – idealny prezent na osiemnastkę lub urodziny. Voucher jest ważny 12 miesięcy od daty zakupu i można go zrealizować w dowolnie wybranym terminie. Możesz kupić voucher na wybrany pakiet lub na konkretną kwotę. Zadzwoń lub napisz – wyślemy estetyczny PDF na e-mail.</p>
+          <p>Oczywiście! Vouchery to jeden z naszych bestsellerów - idealny prezent na osiemnastkę lub urodziny. Voucher jest ważny 12 miesięcy od daty zakupu i można go zrealizować w dowolnie wybranym terminie. Możesz kupić voucher na wybrany pakiet lub na konkretną kwotę. Zadzwoń lub napisz - wyślemy estetyczny PDF na e-mail.</p>
         </div>
       </div>
 
@@ -889,7 +850,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Po zapisaniu na kurs otrzymujesz dostęp do naszej platformy e-learning – aplikacji webowej i mobilnej z materiałami do teorii, pełnymi testem WORD, filmami instruktażowymi i zestawem znaków drogowych. Uczyć się możesz z telefonu, tabletu lub komputera – kiedy i gdzie chcesz. Platforma śledzi Twój postęp i wskazuje obszary do poprawy.</p>
+          <p>Po zapisaniu na kurs otrzymujesz dostęp do naszej platformy e-learning - aplikacji webowej i mobilnej z materiałami do teorii, pełnymi testem WORD, filmami instruktażowymi i zestawem znaków drogowych. Uczyć się możesz z telefonu, tabletu lub komputera - kiedy i gdzie chcesz. Platforma śledzi Twój postęp i wskazuje obszary do poprawy.</p>
         </div>
       </div>
 
@@ -899,7 +860,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Nie ma się czym stresować – to zdarza się nawet najlepszym! W takim wypadku oferujemy dodatkowe godziny jazd w preferencyjnej cenie (140 zł / godz.) oraz bezpłatną analizę błędów z egzaminu. Nasz instruktor omówi z Tobą to, co poszło nie tak i przygotuje do kolejnego podejścia. Nasza zdawalność wynosi 94% – jesteśmy z Tobą do końca.</p>
+          <p>Nie ma się czym stresować - to zdarza się nawet najlepszym! W takim wypadku oferujemy dodatkowe godziny jazd w preferencyjnej cenie (140 zł / godz.) oraz bezpłatną analizę błędów z egzaminu. Nasz instruktor omówi z Tobą to, co poszło nie tak i przygotuje do kolejnego podejścia. Nasza zdawalność wynosi 94% - jesteśmy z Tobą do końca.</p>
         </div>
       </div>
 
@@ -909,7 +870,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Tak! Organizujemy kursy przyspieszone – nawet do 5 godzin jazd dziennie. To opcja dla osób, które chcą wyrobić prawo jazdy szybko (np. potrzebują do pracy). Termin i harmonogram ustalamy indywidualnie. Skontaktuj się z nami – dobierzemy rozwiązanie idealnie dopasowane do Twoich możliwości.</p>
+          <p>Tak! Organizujemy kursy przyspieszone - nawet do 5 godzin jazd dziennie. To opcja dla osób, które chcą wyrobić prawo jazdy szybko (np. potrzebują do pracy). Termin i harmonogram ustalamy indywidualnie. Skontaktuj się z nami - dobierzemy rozwiązanie idealnie dopasowane do Twoich możliwości.</p>
         </div>
       </div>
 
@@ -917,7 +878,6 @@
   </div>
 </section>
 
-<!-- ===== CTA BANNER ===== -->
 <section class="cta-section reveal">
   <div class="cta-inner">
     <div class="cta-text">
@@ -931,7 +891,6 @@
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section id="contact" class="section contact">
   <div class="container contact-grid">
 
@@ -972,9 +931,9 @@
 
       <div class="opening-hours">
         <h4>Godziny otwarcia biura</h4>
-        <div class="hours-row"><strong>Pon–Pt</strong><span class="open">08:00–20:00</span></div>
-        <div class="hours-row"><strong>Sobota</strong><span class="open">08:00–18:00</span></div>
-        <div class="hours-row"><strong>Niedziela</strong><span class="open">10:00–16:00</span></div>
+        <div class="hours-row"><strong>Pon-Pt</strong><span class="open">08:00-20:00</span></div>
+        <div class="hours-row"><strong>Sobota</strong><span class="open">08:00-18:00</span></div>
+        <div class="hours-row"><strong>Niedziela</strong><span class="open">10:00-16:00</span></div>
       </div>
 
       <div class="map-wrap">
@@ -984,7 +943,7 @@
           style="border:0"
           allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Lokalizacja Szkoły Nauki Jazdy DRIFT – Łódź, ul. Kilińskiego 47"
+          title="Lokalizacja Szkoły Nauki Jazdy DRIFT - Łódź, ul. Kilińskiego 47"
         ></iframe>
       </div>
     </div>
@@ -1013,10 +972,10 @@
         <div class="form-group">
           <label for="service">Kategoria / pakiet</label>
           <select id="service" name="service">
-            <option value="">– Wybierz kategorię / pakiet –</option>
-            <option>Kat. B – Pakiet PODSTAWOWY (2 100 zł)</option>
-            <option>Kat. B – Pakiet KOMFORT (2 499 zł)</option>
-            <option>Kat. B – Pakiet PREMIUM (2 899 zł)</option>
+            <option value="">- Wybierz kategorię / pakiet -</option>
+            <option>Kat. B - Pakiet PODSTAWOWY (3 000 zł)</option>
+            <option>Kat. B - Pakiet KOMFORT (3 500 zł)</option>
+            <option>Kat. B - Pakiet PREMIUM (4 200 zł)</option>
             <option>Kat. A / A2 / A1</option>
             <option>Kat. C / C+E</option>
             <option>Dodatkowe godziny jazd</option>
@@ -1040,7 +999,6 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
@@ -1065,9 +1023,9 @@
     </div>
     <div class="footer-col">
       <h5>Kursy</h5>
-      <a href="#pricing">Kat. B – Podstawowy</a>
-      <a href="#pricing">Kat. B – Komfort</a>
-      <a href="#pricing">Kat. B – Premium</a>
+      <a href="#pricing">Kat. B - Podstawowy</a>
+      <a href="#pricing">Kat. B - Komfort</a>
+      <a href="#pricing">Kat. B - Premium</a>
       <a href="#categories">Kat. A / motocykl</a>
       <a href="#categories">Kat. C / ciężarówka</a>
       <a href="#pricing">Vouchery podarunkowe</a>
@@ -1096,7 +1054,6 @@
   </div>
 </footer>
 
-<!-- ===== STICKY BAR ===== -->
 <div class="stickyBar" id="stickyBar" aria-hidden="true">
   <div class="stickyBar__content">
     <b>Zainteresowany podobną stroną dla Twojej firmy?</b>
@@ -1108,7 +1065,6 @@
 
 <a href="#contact" class="mobile-cta-fixed" aria-label="Zapisz się na kurs">Zapisz się</a>
 
-<!-- ===== AI AGENT ===== -->
 <script
   src="https://cdn.jsdelivr.net/gh/kontaktio-demo/kontaktio@8a6ebea/kontaktio.js"
   data-kontaktio
@@ -1116,18 +1072,15 @@
   data-backend="https://chatbot-backend-x2cy.onrender.com"
 ></script>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-/* ---- PRELOADER ---- */
+
 window.addEventListener("load", () => { document.body.classList.add("loaded"); });
 
-/* ---- NAVBAR ---- */
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 40);
 }, { passive: true });
 
-/* ---- MOBILE NAV ---- */
 const hamburger = document.getElementById("hamburger");
 const mobileNav = document.getElementById("mobileNav");
 hamburger.addEventListener("click", () => {
@@ -1145,7 +1098,6 @@ function closeMobile() {
   document.body.style.overflow = "";
 }
 
-/* ---- SCROLL REVEAL ---- */
 const reveals = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1154,7 +1106,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 reveals.forEach(el => revealObserver.observe(el));
 
-/* ---- COUNTERS ---- */
 function animateCounter(el, target, decimals) {
   const dur = 2000;
   const start = performance.now();
@@ -1183,7 +1134,6 @@ if (statNums.length) {
   so.observe(statNums[0].closest(".hero-stats"));
 }
 
-/* ---- CANVAS: animated road particles ---- */
 (function() {
   const canvas = document.getElementById("roadCanvas");
   if (!canvas) return;
@@ -1233,7 +1183,6 @@ if (statNums.length) {
   animate();
 })();
 
-/* ---- TESTIMONIALS SLIDER ---- */
 const slider = document.getElementById("slider");
 const dots = document.querySelectorAll(".slider-dot");
 const btnPrev = document.getElementById("sliderPrev");
@@ -1252,7 +1201,6 @@ if (btnPrev) btnPrev.addEventListener("click", () => { stopAuto(); goTo(cur - 1)
 dots.forEach(d => d.addEventListener("click", () => { stopAuto(); goTo(+d.dataset.index); startAuto(); }));
 startAuto();
 
-/* ---- FAQ ---- */
 document.querySelectorAll(".faq-question").forEach(btn => {
   btn.addEventListener("click", () => {
     const item = btn.closest(".faq-item");
@@ -1265,12 +1213,11 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   });
 });
 
-/* ---- STICKY BAR ---- */
 (function() {
   const bar = document.getElementById("stickyBar");
   const cls = document.getElementById("stickyClose");
   if (!bar || !cls) return;
-  try { if (localStorage.getItem("drift_sticky_closed") === "1") return; } catch { /* localStorage may be unavailable in private/restricted mode – silently ignore */ }
+  try { if (localStorage.getItem("drift_sticky_closed") === "1") return; } catch { /* localStorage may be unavailable in private/restricted mode - silently ignore */ }
   let last = false, tick = false;
   function upd() {
     const show = window.scrollY > 900;
@@ -1278,11 +1225,10 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     tick = false;
   }
   window.addEventListener("scroll", () => { if (!tick) { requestAnimationFrame(upd); tick = true; } }, { passive: true });
-  cls.addEventListener("click", () => { bar.classList.remove("on"); try { localStorage.setItem("drift_sticky_closed","1"); } catch { /* localStorage may be unavailable in private/restricted mode – silently ignore */ } });
+  cls.addEventListener("click", () => { bar.classList.remove("on"); try { localStorage.setItem("drift_sticky_closed","1"); } catch { /* localStorage may be unavailable in private/restricted mode - silently ignore */ } });
   upd();
 })();
 
-/* ---- CONTACT FORM ---- */
 document.getElementById("contactForm").addEventListener("submit", e => {
   e.preventDefault();
   const btn = e.target.querySelector("button[type=submit]");
@@ -1294,12 +1240,6 @@ document.getElementById("contactForm").addEventListener("submit", e => {
     e.target.reset();
   }, 5000);
 });
-
-/* ---- HERO PARALLAX ---- */
-window.addEventListener("scroll", () => {
-  const car = document.getElementById("heroCar");
-  if (car) car.style.transform = `translateY(${window.scrollY * 0.12}px)`;
-}, { passive: true });
 </script>
 
 </body>
