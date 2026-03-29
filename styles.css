@@ -866,7 +866,7 @@ body.loaded #preloader {
   color: var(--text-muted);
 }
 
-.cat-features li::first-letter { color: var(--orange); font-weight: 700; }
+/* checkmarks are styled inline in HTML, no ::first-letter override needed */
 
 .cat-price {
   font-size: 0.85rem;
@@ -1652,7 +1652,12 @@ body.loaded #preloader {
 .closed { color: var(--text-faint); }
 
 .map-wrap { margin-top: 24px; }
-.map-wrap iframe { border-radius: var(--radius-sm); }
+.map-wrap iframe {
+  border-radius: var(--radius-sm);
+  margin-top: 24px;
+  border: 0;
+  filter: grayscale(80%) invert(90%) hue-rotate(180deg);
+}
 
 /* Contact form */
 .form-title {

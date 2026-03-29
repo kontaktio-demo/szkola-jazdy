@@ -981,7 +981,7 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.387!2d19.4558!3d51.7592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34e5e85aa573%3A0x9d0c4e8d5e5c5a5b!2sKili%C5%84skiego%2047%2C%2090-001%20%C5%81%C3%B3d%C5%BA!5e0!3m2!1spl!2spl!4v1711638000000!5m2!1spl!2spl"
           width="100%" height="220"
-          style="border:0;border-radius:16px;margin-top:24px;filter:grayscale(80%) invert(90%) hue-rotate(180deg)"
+          style="border:0"
           allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Lokalizacja Szkoły Nauki Jazdy DRIFT – Łódź, ul. Kilińskiego 47"
@@ -1270,7 +1270,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   const bar = document.getElementById("stickyBar");
   const cls = document.getElementById("stickyClose");
   if (!bar || !cls) return;
-  try { if (localStorage.getItem("drift_sticky_closed") === "1") return; } catch {}
+  try { if (localStorage.getItem("drift_sticky_closed") === "1") return; } catch { /* localStorage may be unavailable in private/restricted mode – silently ignore */ }
   let last = false, tick = false;
   function upd() {
     const show = window.scrollY > 900;
@@ -1278,7 +1278,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     tick = false;
   }
   window.addEventListener("scroll", () => { if (!tick) { requestAnimationFrame(upd); tick = true; } }, { passive: true });
-  cls.addEventListener("click", () => { bar.classList.remove("on"); try { localStorage.setItem("drift_sticky_closed","1"); } catch {} });
+  cls.addEventListener("click", () => { bar.classList.remove("on"); try { localStorage.setItem("drift_sticky_closed","1"); } catch { /* localStorage may be unavailable in private/restricted mode – silently ignore */ } });
   upd();
 })();
 
