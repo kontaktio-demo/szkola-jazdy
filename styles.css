@@ -390,9 +390,9 @@ body.loaded #preloader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 0 clamp(20px, 6vw, 100px);
+  padding: 0;
   background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,95,0,0.08) 0%, transparent 60%),
               linear-gradient(160deg, #0d0d0d 0%, #0a0a0a 50%, #0f0a00 100%);
 }
@@ -472,7 +472,14 @@ body.loaded #preloader {
   width: 100%;
   text-align: center;
   padding-top: clamp(80px, 10vh, 120px);
-  padding-bottom: clamp(80px, 10vh, 120px);
+  padding-bottom: clamp(60px, 8vh, 100px);
+  padding-left: clamp(20px, 6vw, 100px);
+  padding-right: clamp(20px, 6vw, 100px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-badge {
@@ -559,10 +566,7 @@ body.loaded #preloader {
 }
 
 .hero-stats {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -573,6 +577,7 @@ body.loaded #preloader {
   -webkit-backdrop-filter: blur(4px);
   border-top: 1px solid var(--border);
   z-index: 3;
+  flex-shrink: 0;
 }
 
 .stat-item {
@@ -1869,12 +1874,11 @@ body.loaded #preloader {
 }
 
 @media (max-width: 640px) {
-  .hero {
-    padding: 0 clamp(16px, 5vw, 32px);
-  }
   .hero-content {
     padding-top: 96px;
-    padding-bottom: clamp(80px, 12vh, 120px);
+    padding-bottom: clamp(40px, 6vh, 60px);
+    padding-left: clamp(16px, 5vw, 32px);
+    padding-right: clamp(16px, 5vw, 32px);
   }
   .hero-stats {
     flex-wrap: wrap;
