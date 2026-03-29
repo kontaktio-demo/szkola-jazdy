@@ -434,20 +434,6 @@ body.loaded #preloader {
   100% { top: 110vh; opacity: 0; }
 }
 
-.hero-car {
-  position: absolute;
-  right: clamp(-40px, -2vw, 0px);
-  bottom: 8%;
-  width: clamp(420px, 55vw, 760px);
-  z-index: 1;
-  filter: drop-shadow(0 20px 60px rgba(255,95,0,0.15)) drop-shadow(0 0 2px rgba(255,95,0,0.3));
-  animation: carFloat 4s ease-in-out infinite;
-}
-
-@keyframes carFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
 
 .speed-lines {
   position: absolute;
@@ -630,21 +616,6 @@ body.loaded #preloader {
   background: var(--border);
 }
 
-.scroll-arrow {
-  position: absolute;
-  bottom: 100px;
-  right: clamp(20px, 4vw, 60px);
-  width: 44px; height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border-orange);
-  border-radius: 50%;
-  z-index: 3;
-  animation: arrowBounce 2s ease-in-out infinite;
-}
-
-@keyframes arrowBounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);} }
 
 .about {
   background: var(--surface);
@@ -1875,7 +1846,6 @@ body.loaded #preloader {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
 
-  .hero-car { opacity: 0.22; width: clamp(320px, 80vw, 560px); pointer-events: none; }
   .hero-content { max-width: 100%; }
 
   .about-grid { grid-template-columns: 1fr; }
@@ -1926,7 +1896,6 @@ body.loaded #preloader {
   .mobile-cta-fixed { display: flex; }
   .stickyBar { display: none; }
 
-  .hero-car { display: none; }
 
   .schedule-event {
     grid-template-columns: 44px 1fr;
